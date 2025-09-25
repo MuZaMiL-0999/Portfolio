@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    
+  
+    
+    .featurette {
+      background: rgba(255,255,255,0.92);
+      border-radius: 24px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      margin: 48px auto 48px auto;
+      padding: 40px 32px 40px 32px;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .featurette-divider {
+      border-top: 2px solid #eee;
+      margin: 32px 0 32px 0;
+    }
+    .featurette img {
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      object-fit: cover;
+      background: #fafafa;
+    }
+    .featurette-heading {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 18px;
+    }
+    .featurette .lead {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 0;
+    }
+    .text-body-secondary {
+      color: #f90606 !important;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(30, 30, 30, 0.18);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 10;
+      padding: 0 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .navbar ul {
+      display: flex;
+      justify-content: flex-end;
+  gap: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 28px 80px 28px 0;
+    }
+    .navbar a {
+  color: #f90606;
+  text-decoration: none;
+ font-weight: 900;
+    letter-spacing: 3.5px;
+  letter-spacing: 3.6px;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 0 2px 8px rgba(249,6,6,0.10);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  
+    h1, h2, p, button {
+      margin-top: 32px;
+      
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: black;
+    }
+
+    button {
+  padding: 20px 48px;
+      background: linear-gradient(90deg, #ff0000 0%, #ff5b32 100%);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+  font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #ff5b32 0%, #ff0000 100%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('./Untitled\ design.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #f90606;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 100px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+
+    h2,p{
+        color: black;
+        font-size: 2rem;
+    }
+
+
+     .heading-inline {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-top: 12.5rem;
+    }
+       .navbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .navbar-brand {
+    color: #f90606;
+    font-size: 1.7rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding-left: 16px;
+    text-shadow: 2px 4px 16px rgba(255, 10, 10, 0.25), 0 2px 8px rgba(249,6,6,0.10);
+    }
+    .navbar ul {
+      justify-content: flex-end;
+      flex: none;
+    }
+
+      .footer-clean {
+      text-align: center;
+      padding: 24px 0 16px 0;
+      background: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+      color: #222;
+      margin-top: 32px;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+    }
+    .footer-clean h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #f90606;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+    .footer-clean p {
+      margin: 4px 0;
+      font-size: 1.08rem;
+    }
+    .name {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #f90606;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 4px;
+      text-shadow: 2px 4px 16px rgba(255, 10, 10, 0.25), 0 2px 8px rgba(249,6,6,0.10);
+    }
+
+      @media (max-width: 900px) {
+      .hero-section {
+        height: 60vh;
+        padding: 0;
+      }
+      .hero-content {
+        padding: 40px 16px 24px 16px;
+      }
+      .heading-inline {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 4rem;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero-section {
+        height: 40vh;
+        min-height: 320px;
+        background-position: center top;
+      }
+      .hero-content {
+        padding: 18px 6vw 12px 6vw;
+      }
+      .heading-inline h1, .heading-inline h2 {
+        font-size: 1.2rem;
+      }
+      .hero-content p, .hero-content button {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar-content">
+      <span class="navbar-brand">Portfolio</span>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+
+  <section class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="heading-inline">
+        <h2>I AM</h2>
+        <h1 class="name">MD MUZAMMIL</h1>
+      </div>
+   
+      <p>BCA Student | Aspiring Developer</p>
+      <button>See My Work</button>
+    </div>
+  </section>
+
+
+    <div class="featurette">
+      <div style="flex:2;">
+        <h2 class="featurette-heading">About Me <span class="text-body-secondary"><br>Hello! I'm a BCA student passionate about learning web development.</span></h2>
+        <p class="lead">I'm building my skills in HTML, CSS, and programming languages like C and Python.</p>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <img src="112.jpeg" alt="About Me Photo">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="featurette">
+      <div style="flex:2;">
+  <h2 class="featurette-heading">Education</h2>
+        <p style="font-size:1.1rem;color:#333;margin-bottom:12px;">I am 10th and 12th pass with a strong academic record, always eager to learn new things, and passionate about technology and personal growth.</p>
+        <ul style="margin-left:18px;">
+          <li><strong>Static Portfolio:</strong> A personal website using only HTML and CSS.</li>
+          <li><strong>Resume Page:</strong> A styled resume page using HTML tables and lists.</li>
+        </ul>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <img src="1123.jpg" alt="Education Photo">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="featurette">
+      <div style="flex:2;">
+  <h2 class="featurette-heading">Skills</h2>
+        <ul style="margin-left:18px;">
+          <li>HTML & CSS</li>
+          <li>C, C++</li>
+          <li>Python (Basic)</li>
+          <li>Teamwork & Collaboration</li>
+          <li>Good Communication Skills</li>
+          <li>Adaptability & Quick Learner</li>
+        </ul>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <img src="114.jpeg" alt="Skills Photo">
+      </div>
+    </div>
+  
+           
+
+
+
+
+
+    <footer class="footer-clean">
+      <h2>Contact Me</h2>
+      <p>Phone: +91-8999791604</p>
+      <p>Email: muzamilshaikh9130@gmail.com / muzammilshaikh75636@gmail.com</p>
+    </footer>
+  
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
